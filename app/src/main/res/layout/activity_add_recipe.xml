@@ -1,0 +1,150 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+   android:background="#fff"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.nimish.nimish.materialtest.AddRecipe">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/main_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Add upto 8 Images"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:id="@+id/hsv"
+                android:fillViewport="true"
+                android:layout_height="120dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/horizontalScrollLinearLayoutContainer"
+                    android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/horizontalScrollLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"/>
+
+                        <Button
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/camera_button"
+                            android:background="@drawable/ic_camera_button"
+                            android:onClick="pickImage"></Button>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <EditText
+                android:id="@+id/recipe_name_add"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:hint="Name of the recipe"
+                android:textColor="#000"
+                android:textSize="@dimen/edit_text"
+                android:background="@drawable/editbox_add_recipe_activity" />
+
+            <Spinner
+                android:id="@+id/recipe_category_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+
+
+            <LinearLayout
+                android:id="@+id/ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/ingredient_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textColor="#000"
+                    android:textSize="@dimen/edit_text"
+                    android:focusable="false"
+                    android:hint="Choose an Ingredient"
+                    android:background="@drawable/editbox_add_recipe_activity"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/ingredient_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textColor="#000"
+                    android:textSize="@dimen/edit_text"
+                    android:focusable="false"
+                    android:hint="Choose an Ingredient"
+                    android:background="@drawable/editbox_add_recipe_activity"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/ingredient_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textColor="#000"
+                    android:textSize="@dimen/edit_text"
+                    android:hint="Choose an Ingredient"
+                    android:background="@drawable/editbox_add_recipe_activity"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/new_ingredient"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_add"
+                android:onClick="addEditText"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/step_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:ems="10"
+                android:gravity="top|left"
+                android:src="@drawable/text_background"
+                android:inputType="textMultiLine"
+                android:hint="Write down the steps"
+                android:textSize="14sp"
+                android:background="@drawable/editbox_add_recipe_activity" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#D32F2F</color>
+    <color name="primaryColorDark">#B71C1C</color>
+    <color name="accentColor">#ffffb9ad</color>
+    <color name="verylightRed">#fffff5f0</color>
+    <color name="reddish">#009688</color>
+    <color name="ingredientTextColor">#000</color>
+</resources>

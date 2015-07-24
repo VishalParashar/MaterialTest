@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nimish.nimish.materialtest" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".AddRecipe"
+            android:label="@string/title_activity_add_recipe"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Ingredient"
+            android:label="@string/title_activity_ingredient" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nimish.nimish.materialtest.AddRecipe" />
+
+        </activity>
+        <activity
+            android:name=".Ingredient2"
+            android:label="@string/title_activity_ingredient2" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nimish.nimish.materialtest.Ingredient" />
+        </activity>
+        <activity
+            android:name=".DetialedRecipe"
+            android:label="@string/title_activity_detialed_recipe" >
+        </activity>
+    </application>
+
+</manifest>
